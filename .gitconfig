@@ -1,0 +1,51 @@
+[user]
+	name = Eric Olsson
+	email = eric.olsson@docusign.com
+[diff]
+	tool = bc
+[difftool "bc"]
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[difftool]
+	prompt = false
+[merge]
+	tool = bc
+[mergetool "bc"]
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[color "status"]
+	untracked = red normal bold
+	changed = red normal bold
+[color "branch"]
+	current = green normal bold
+[core]
+	filemode = false
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+	context = normal
+[alias]
+	ls = log --color --graph --pretty=format:'%C(bold yellow)%h%Creset -%C(auto)%d%Creset %s %C(bold green)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate
+	ll = log --color --graph --pretty=format:'%C(bold yellow)%h%Creset -%C(auto)%d%Creset %s %C(bold green)(%cr) %C(bold blue) %Creset' --abbrev-commit --decorate --numstat
+	grep = !git ls-files | grep -i
+	unpushed = log --branches --not --remotes --color --graph --pretty=format:'%C(bold red)%h%Creset -%C(bold yellow)%d%Creset %s %C(bold green)(%cr) %C(cyan)%Creset' --abbrev-commit
+	la = !git config -l | grep alias | cut -c 7-
+	up = !git pull --rebase
+	bclean = "!f() { git branch --merged | grep -v '\\*\\|master|develop' | xargs -n 1 git branch -d; }; f"
+	cia = commit --amend -C HEAD
+	di = diff --staged
+	new = log master.. --reverse --oneline
+	rbc = rebase --continue
+	co = checkout
+	ss = status --short
+[pack]
+	useSparse = true
+[rebase]
+	autosquash = true
