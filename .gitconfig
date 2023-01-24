@@ -18,6 +18,7 @@
 	current = green normal bold
 [core]
 	filemode = false
+    fsmonitor = true
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
@@ -49,3 +50,7 @@
 	useSparse = true
 [rebase]
 	autosquash = true
+[help]
+    autocorrect = 1
+[blame]
+    date = relative
