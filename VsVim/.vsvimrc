@@ -1,0 +1,21 @@
+set autoindent
+
+set laststatus=2
+
+" turn relative line numbers on
+:set relativenumber
+:set rnu
+
+" Indentation settings for using 4 spaces instead of tabs
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set ignorecase
+set clipboard=unnamed
+let mapleader=" "
+
+nnoremap <Leader>tr :vsc TestExplorer.RunAllTestsInContext<CR>
+nnoremap <Leader>td :vsc TestExplorer.DebugAllTestsInContext<CR>
+nnoremap <Leader>tl :vsc TestExplorer.RepeatLastRun<CR>
+
